@@ -8,13 +8,13 @@ export default function Navbar() {
 
   const links = [
     { name: "Home", path: "/" },
-    { name: "Research", path: "/research" },
-    { name: "Services", path: "/services" },
-    { name: "Team", path: "/team" },
+    { name: "Research", path: "/coming-soon" },
+    { name: "Services", path: "/coming-soon" },
+    { name: "Team", path: "/coming-soon" },
     { name: "Training", path: "/training" },
     { name: "Events", path: "/events" },
     { name: "MoU", path: "/mou" },
-    { name: "Publications", path: "/publications" },
+    { name: "Publications", path: "/coming-soon" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact" },
   ];
