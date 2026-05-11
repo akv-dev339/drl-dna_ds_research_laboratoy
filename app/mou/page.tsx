@@ -18,10 +18,10 @@ export default async function MouPage() {
             key={m.id}
             className="bg-slate-900/60 backdrop-blur p-6 rounded-xl border border-cyan-500/10"
           >
-            <img src={m.logoUrl} className="h-16 mb-4" />
+            <img src={m.logo_url} className="h-16 mb-4" />
 
             <h3 className="text-white text-lg font-semibold">
-              {m.organizationName}
+              {m.organization_name}
             </h3>
 
             <p className="text-gray-400 text-sm mt-2">
@@ -29,7 +29,7 @@ export default async function MouPage() {
             </p>
 
            <a
-  href={`${m.documentUrl}?fl_attachment=false`}
+  href={`${m.document_url}?fl_attachment=false`}
   target="_blank"
   rel="noopener noreferrer"
   className="text-cyan-400 mt-4 inline-block hover:underline"

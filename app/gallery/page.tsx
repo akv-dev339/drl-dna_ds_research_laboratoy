@@ -16,7 +16,7 @@ export default async function GalleryPage() {
         {images.map((img: any) => (
           <img
             key={img.id}
-            src={img.imageUrl}
+            src={img.image_url}
             className="mb-4 rounded-xl hover:scale-105 transition duration-300"
           />
         ))}

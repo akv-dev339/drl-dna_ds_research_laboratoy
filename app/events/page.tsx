@@ -19,7 +19,7 @@ export default async function EventsPage() {
             className="bg-slate-900/60 backdrop-blur border border-cyan-500/10 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
           >
             <img
-              src={event.imageUrl}
+              src={event.image_url}
               className="w-full h-52 object-cover"
             />
 
@@ -33,7 +33,7 @@ export default async function EventsPage() {
               </p>
 
               <p className="text-cyan-400 mt-3 text-sm">
-                {event.eventDate}
+                {event.event_date}
               </p>
             </div>
           </div>

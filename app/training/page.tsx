@@ -18,7 +18,7 @@ export default async function TrainingPage() {
             key={t.id}
             className="bg-slate-900/60 backdrop-blur rounded-xl p-5 border border-cyan-500/10 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] transition"
           >
-            <img src={t.imageUrl} className="rounded-lg mb-4" />
+            <img src={t.image_url} className="rounded-lg mb-4" />
 
             <h2 className="text-white text-xl font-semibold">
               {t.title}

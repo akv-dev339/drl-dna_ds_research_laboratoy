@@ -1,31 +1,71 @@
-const BASE_URL = "https://drl-backend-wlz1.onrender.com/api/lab";
+// const BASE_URL = "https://drl-backend-wlz1.onrender.com/api/lab";
 
-// 🔥 common fetch wrapper
+// // 🔥 common fetch wrapper
+// async function fetchData(url: string) {
+//   try {
+//     const res = await fetch(url, {
+//       cache: "no-store",
+//     });
+
+//     if (!res.ok) {
+//       throw new Error("Failed to fetch: " + res.status);
+//     }
+
+//     return res.json();
+//   } catch (err) {
+//     console.error(err);
+//     return [];
+//   }
+// }
+
+// // EVENTS
+// export const getEvents = () => fetchData(`${BASE_URL}/events/getall`);
+
+// // TRAINING
+// export const getTraining = () => fetchData(`${BASE_URL}/training`);
+
+// // GALLERY
+// export const getGallery = () => fetchData(`${BASE_URL}/gallery`);
+
+// // MOU
+// export const getMou = () => fetchData(`${BASE_URL}/mou`);
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+// common fetch wrapper
 async function fetchData(url: string) {
+
   try {
+
     const res = await fetch(url, {
       cache: "no-store",
     });
 
     if (!res.ok) {
-      throw new Error("Failed to fetch: " + res.status);
+      throw new Error(`Failed to fetch: ${res.status}`);
     }
 
     return res.json();
+
   } catch (err) {
+
     console.error(err);
     return [];
+
   }
 }
 
 // EVENTS
-export const getEvents = () => fetchData(`${BASE_URL}/events/getall`);
+export const getEvents = () =>
+  fetchData(`${BASE_URL}/api/lab/events`);
 
 // TRAINING
-export const getTraining = () => fetchData(`${BASE_URL}/training`);
+export const getTraining = () =>
+  fetchData(`${BASE_URL}/api/lab/training`);
 
 // GALLERY
-export const getGallery = () => fetchData(`${BASE_URL}/gallery`);
+export const getGallery = () =>
+  fetchData(`${BASE_URL}/api/lab/gallery`);
 
 // MOU
-export const getMou = () => fetchData(`${BASE_URL}/mou`);
+export const getMou = () =>
+  fetchData(`${BASE_URL}/api/lab/mou`);
